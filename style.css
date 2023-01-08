@@ -1,0 +1,414 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  background: var(--bg-color);
+  min-height: cal(110vh + 5rem);
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+*::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.8);
+}
+
+:root {
+  --bg-color: black;
+  --text-major: white;
+  --text-minor: #e6e6e6;
+  --accent-color: tomato;
+}
+
+@font-face {
+  font-family: Apple;
+  src: url(https://cdn.glitch.global/fb0116d2-6ea6-4c65-bb46-aabeddd27edc/Apple%20%5D%5B.ttf?v=1652884935714);
+}
+
+@font-face {
+  font-family: Dots;
+  src: url(https://cdn.glitch.global/fb0116d2-6ea6-4c65-bb46-aabeddd27edc/modern_dot_digital-7.ttf?v=1652884923158);
+}
+
+.social__block{
+  color: white;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-family: "Dots", sans-serif;
+  opacity: .8;
+  padding: .5rem;
+  display: flex; 
+  gap: 1rem;
+  background: none;
+}
+
+.social__link{
+  color: tomato;
+}
+
+h4{
+  background: black;
+  padding: .5rem;
+}
+
+.social__close{
+  cursor:pointer;
+}
+
+.social__close:hover{
+  color: tomato;
+}
+
+.social__block a{
+  color: tomato;
+  background: none;
+}
+
+
+
+
+
+h1 {
+  font-family: "Dots", sans-serif;
+  color: var(--text-major);
+}
+
+.nav__link {
+  font-family: "Dots", sans-serif;
+  color: var(--text-major);
+  font-weight: normal;
+  font-size: 1.125rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.nav__list {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+}
+
+.active__page {
+  color: var(--accent-color);
+  transition: color ease-in 250ms;
+}
+
+.active__filter {
+  color: var(--accent-color);
+  transition: color ease-in 250ms;
+}
+
+.page__about{
+  display: none;
+  
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 4rem;
+  gap: 12rem;
+}
+
+.page__contact{
+  display: none;
+  place-items: center;
+  margin-top: 3rem;
+}
+
+.contactRedirect{
+  color: tomato;
+  border-bottom: 3px dotted tomato;
+  cursor: pointer;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Mono', monospace;
+}
+
+label{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-top: .5rem;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+
+input{
+  padding: .25rem;
+  max-width: 300px;
+  width: 300px;
+  color: white;
+  border: solid 2px white;
+}
+
+textarea{
+  resize: none;
+  height: 250px;
+  color: white;
+  padding: .125rem;
+  border: solid 2px white;
+}
+
+button{
+  color: white;
+  text-transform: uppercase;
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  padding-block: .25rem;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  border: 3px dotted tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .5;
+  color: tomato;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+textarea:focus, input:focus{
+  outline: 1px solid tomato;
+}
+
+.name{
+  position: relative;
+}
+
+.name::before{
+  content:"NAME:";
+  color: tomato;
+  position: absolute;
+  left: -8rem;
+}
+
+.location{
+  position: relative;
+}
+
+.location::before{
+  content:"LOCATION:";
+  color: tomato;
+  position: absolute;
+  left: -8rem;
+}
+
+.connect{
+  position: relative;
+}
+
+.connect::before{
+  content:"CONNECT:";
+  color: tomato;
+  position: absolute;
+  left: -8rem;
+}
+
+.interests{
+  position: relative;
+}
+
+.interests::before{
+  content:"INTERESTS:";
+  color: tomato;
+  position: absolute;
+  left: -8rem;
+}
+
+.intro__text{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.contact__link{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+footer{
+  opacity: 0.5;
+  background: #101010;
+  height: 5rem;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  color: tomato;
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  bottom:-5rem;
+  left: 0;
+  right:0;
+  transition: opacity ease-in 250ms;
+}
+
+footer:hover{
+  opacity: 1;
+  transition: opacity ease-in 250ms;
+}
+
+.socials{
+  display: flex;
+  gap: .5rem;
+}
+
+
+.intro{
+  color:white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.125rem;
+}
+.headshot{
+  width: 375px;
+  aspect-ratio: 1;
+  border: 5px solid white;
+  filter: brightness(1.25)
+}
+
+.page__gallery {
+  display: grid;
+  justify-items: center;
+}
+.wrapper__wrapper {
+  display: block;
+  justify-items: center;
+  width: 1200px;
+}
+
+.gallery__filters {
+  display: flex;
+  /*Show hide filters for types of images*/
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: max-content;
+  color: var(--text-major);
+  font-family: "Dots", sans-serif;
+  cursor: pointer;
+}
+
+.gallery__filter {
+  list-style: none;
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: column;
+  max-height: 1250px;
+  margin-block: 2rem 4rem;
+  width: max-content;
+}
+
+.imgModal {
+  max-width: 300px;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.modal__display{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(0,0,0,.6);
+  display: none;
+}
+
+img{
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ion-icon{
+  transform: translatey(20%)
+}
+
+.modal__image{
+  place-self: center;
+  max-width: 70%;
+}
+
+.introduction{
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h4{
+    font-size: 1rem;
+  }
+  .social__block{
+    width: max-content;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2rem;
+  }
+  .gallery__wrapper {
+    max-height: 5000px;
+    align-items: center;
+  }
+  .wrapper__wrapper {
+    display: block;
+    width: 325px;
+  }
+  .imgModal {
+    max-width: 325px;
+  }
+  .page__gallery {
+    margin-bottom: 2rem;
+  }
+  .page__about{
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 10rem;
+    margin-top: none;
+  }
+  .page__contact{
+    margin-top: 0;
+  }
+  .intro__text{
+    width: 200px;
+    align-self: center;
+    transform: translatex(5rem);
+    word-wrap: break-word;
+  }
+  .headshot{
+    width: 325px;
+  }
+}
